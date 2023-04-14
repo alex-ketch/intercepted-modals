@@ -1,8 +1,18 @@
-export default function RootLayout({ children }) {
+import React from 'react'
+
+export default function Root({
+  children,
+  slot,
+}: {
+  children: React.ReactNode
+  slot: React.ReactNode
+}) {
   return (
     <html>
-      <head />
-      <body>{children}</body>
+      <body>
+        {children}
+        {slot}
+      </body>
     </html>
   )
 }
